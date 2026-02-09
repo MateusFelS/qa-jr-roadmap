@@ -52,7 +52,7 @@ No contexto de testes de software, a ISTQB estabelece uma distinção clara entr
 
 Segundo o ISTQB Glossary of Testing Terms: 
 
-> "Um erro é uma ação humana que produz um resultado incorreto. Quando esse erro é introduzido em um artefato do software, como código ou documentação, ele se manifesta como um defeito, também conhecido informalmente como bug. A falha, por sua vez, ocorre quando esse defeito é executado e resulta em um comportamento incorreto do sistema."
+> **"Um erro é uma ação humana que produz um resultado incorreto. Quando esse erro é introduzido em um artefato do software, como código ou documentação, ele se manifesta como um defeito, também conhecido informalmente como bug. A falha, por sua vez, ocorre quando esse defeito é executado e resulta em um comportamento incorreto do sistema."**
 
 Ou seja, o erro está relacionado a uma decisão ou interpretação equivocada realizada por um indivíduo durante atividades como levantamento de requisitos, projeto, codificação ou testes.
 
@@ -66,4 +66,4 @@ Ou seja, o erro está relacionado a uma decisão ou interpretação equivocada r
 
 Dessa forma, a ISTQB descreve a relação causal entre esses conceitos como:
 
-> Erro → Defeito/Bug → Falha
+> **Erro → Defeito/Bug → Falha**
