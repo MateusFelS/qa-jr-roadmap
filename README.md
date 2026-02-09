@@ -8,8 +8,8 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 ---
 
 ## Fundamentos de Qualidade de Software
-- [ ] O que é Qualidade de Software
-- [ ] Papel do QA no time de desenvolvimento
+- [x] O que é Qualidade de Software
+- [x] Papel do QA no time de desenvolvimento
 - [ ] SDLC (Ciclo de Vida do Desenvolvimento de Software)
 - [ ] STLC (Ciclo de Vida de Testes de Software)
 - [ ] Diferença entre erro, defeito, bug e falha
