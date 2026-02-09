@@ -57,9 +57,7 @@ Segundo o ISTQB Glossary of Testing Terms:
 Ou seja, o erro está relacionado a uma decisão ou interpretação equivocada realizada por um indivíduo durante atividades como levantamento de requisitos, projeto, codificação ou testes.
 
 - **Exemplo:**
-
-  Considere um sistema que deve aplicar desconto para compras a partir de R$ 100,00:
-  
+  Considere um sistema que deve aplicar desconto para compras a partir de R$ 100,00:  
   - **Erro:** o desenvolvedor interpreta incorretamente a regra de negócio e entende que o desconto deve ser aplicado apenas para valores estritamente maiores que R$ 100,00.
   - **Defeito/Bug:** o código é implementado utilizando a condição `valor > 100`, em vez de `valor >= 100`.
   - **Falha:** ao realizar uma compra exatamente no valor de R$ 100,00, o sistema não aplica o desconto esperado, apresentando um comportamento incorreto ao usuário.
@@ -67,3 +65,33 @@ Ou seja, o erro está relacionado a uma decisão ou interpretação equivocada r
 Dessa forma, a ISTQB descreve a relação causal entre esses conceitos como:
 
 > **Erro → Defeito/Bug → Falha**
+
+## Tipos de Teste
+
+A ISTQB classifica os testes de software em diferentes **tipos de teste**, de acordo com o objetivo da avaliação realizada sobre o sistema.
+
+Os **testes funcionais** verificam se o software atende aos requisitos funcionais especificados, validando entradas, processamento e saídas esperadas. Os **testes não funcionais** avaliam atributos de qualidade, como desempenho, usabilidade, confiabilidade e segurança.
+
+O **teste de regressão** tem como objetivo assegurar que alterações no software não introduzam defeitos em funcionalidades já existentes. O **teste exploratório** combina aprendizado, projeto e execução de testes de forma simultânea, sendo guiado pela experiência do testador.
+
+- **Exemplo:**
+  Em um sistema de login:
+  - **Funcional**: verificar se o usuário consegue acessar com credenciais válidas.
+  - **Não funcional**: avaliar o tempo de resposta do login.
+  - **Regressão**: garantir que mudanças no cadastro não afetem o login.
+  - **Exploratório**: explorar comportamentos inesperados com dados inválidos.
+
+---
+
+## Níveis de Teste
+
+Os **níveis de teste** definem em qual etapa do desenvolvimento o software é avaliado, considerando o grau de integração dos componentes.
+
+O **teste unitário** verifica unidades individuais do software de forma isolada. O **teste de integração** avalia a interação entre componentes integrados. O **teste de sistema** valida o sistema completo em relação aos requisitos especificados. O **teste de aceitação** confirma se o sistema atende às necessidades do negócio e aos critérios definidos pelos usuários.
+
+- **Exemplo:**
+  Em um sistema de compras:
+  - **Unitário**: testar o cálculo do frete.
+  - **Integração**: validar a comunicação entre carrinho e pagamento.
+  - **Sistema**: testar o fluxo completo de compra.
+  - **Aceitação**: confirmar se o sistema atende às regras do cliente.
