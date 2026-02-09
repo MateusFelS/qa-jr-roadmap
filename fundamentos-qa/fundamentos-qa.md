@@ -32,13 +32,13 @@ A partir dessa perspectiva, o papel do QA não se limita à execução de testes
 
 ## SDLC (Ciclo de Vida do Desenvolvimento de Software) x STLC (Ciclo de Vida de Testes de Software)
 
-O **SDLC (Software Development Life Cycle)** corresponde ao ciclo de vida completo do software, englobando todas as atividades necessárias para sua concepção, desenvolvimento, validação, implantação e manutenção.
+O **SDLC** corresponde ao ciclo de vida completo do software, englobando todas as atividades necessárias para sua concepção, desenvolvimento, validação, implantação e manutenção.
 
 Segundo Sommerville (2016):
 
 > **“O ciclo de vida do software organiza os processos fundamentais de especificação, desenvolvimento, validação e evolução, garantindo que o produto atenda aos requisitos técnicos e às necessidades dos usuários.”**
 
-Já o **STLC (Software Testing Life Cycle)** refere-se ao ciclo de vida do processo de testes de software. Ele descreve, de forma estruturada, as atividades relacionadas ao planejamento, projeto, execução e encerramento dos testes, com o objetivo de verificar e validar a conformidade do sistema em relação aos requisitos definidos.
+Já o **STLC** refere-se ao ciclo de vida do processo de testes de software. Ele descreve, de forma estruturada, as atividades relacionadas ao planejamento, projeto, execução e encerramento dos testes, com o objetivo de verificar e validar a conformidade do sistema em relação aos requisitos definidos.
 
 Conforme discutido por Myers, Sandler e Badgett (2011) e Rex Black (2009):
 
