@@ -20,7 +20,7 @@ Dessa forma, a aceitação por parte dos usuários torna-se um fator central par
 
 ## Papel do QA
 
-A **garantia da qualidade de software (Quality Assurance – QA)** está diretamente relacionada à adoção de processos bem definidos e à prevenção de defeitos ao longo de todo o ciclo de vida do software.
+A **garantia da qualidade de software** está diretamente relacionada à adoção de processos bem definidos e à prevenção de defeitos ao longo de todo o ciclo de vida do software.
 
 Roger S. Pressman, em *Engenharia de Software: Uma Abordagem Profissional*, destaca que a garantia da qualidade de software consiste em um conjunto de atividades planejadas e sistemáticas que asseguram que os processos, métodos e padrões adotados durante o desenvolvimento sejam seguidos corretamente. Segundo o autor:
 
