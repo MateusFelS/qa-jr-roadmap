@@ -56,7 +56,7 @@ Segundo o ISTQB Glossary of Testing Terms:
 
 Ou seja, o erro está relacionado a uma decisão ou interpretação equivocada realizada por um indivíduo durante atividades como levantamento de requisitos, projeto, codificação ou testes.
 
-- Exemplo simples:
+- **Exemplo:**
 
   Considere um sistema que deve aplicar desconto para compras a partir de R$ 100,00:
   
