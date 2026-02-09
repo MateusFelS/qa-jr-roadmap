@@ -12,9 +12,9 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [x] 🟩 Papel do QA no time de desenvolvimento
 - [x] 🟩 SDLC (Ciclo de Vida do Desenvolvimento de Software)
 - [x] 🟩 STLC (Ciclo de Vida de Testes de Software)
-- [ ] ⬜ Diferença entre erro, defeito, bug e falha
-- [ ] ⬜ Tipos de teste (funcional, não funcional, regressão, exploratório)
-- [ ] ⬜ Níveis de teste (unitário, integração, sistema, aceitação)
+- [x] 🟩 Diferença entre erro, defeito, bug e falha
+- [x] 🟩 Tipos de teste (funcional, não funcional, regressão, exploratório)
+- [x] 🟩 Níveis de teste (unitário, integração, sistema, aceitação)
 
 ---
 
