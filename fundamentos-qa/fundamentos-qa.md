@@ -6,7 +6,10 @@ A **qualidade de software** é um dos pilares fundamentais da Engenharia de Soft
 
 Segundo Ian Sommerville, em *Software Engineering*, a qualidade de software é definida como:
 
-> **“Atributos essenciais que afetam a aceitação do software pelo usuário, incluindo confiabilidade, eficiência, facilidade de uso e manutenção.”**
+<blockquote style="color:#2c7be5; border-left:4px solid #2c7be5; padding-left:12px;">
+Atributos essenciais que afetam a aceitação do software pelo usuário, incluindo confiabilidade, eficiência, facilidade de uso e manutenção.
+</blockquote>
+
 
 Nesse contexto, um software de qualidade deve apresentar:
 - funcionamento confiável;
