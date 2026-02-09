@@ -7,24 +7,18 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 
 ---
 
-<details open>
-<summary>Fundamentos de Qualidade de Software</summary>
-
-- [x] 🟩 **O que é Qualidade de Software**
-- [x] 🟩 **Papel do QA no time de desenvolvimento**
+## Fundamentos de Qualidade de Software
+- [x] 🟩 O que é Qualidade de Software
+- [x] 🟩 Papel do QA no time de desenvolvimento
 - [x] 🟩 SDLC (Ciclo de Vida do Desenvolvimento de Software)
-- [ ] ⬜ STLC (Ciclo de Vida de Testes de Software)
+- [x] 🟩 STLC (Ciclo de Vida de Testes de Software)
 - [ ] ⬜ Diferença entre erro, defeito, bug e falha
 - [ ] ⬜ Tipos de teste (funcional, não funcional, regressão, exploratório)
 - [ ] ⬜ Níveis de teste (unitário, integração, sistema, aceitação)
 
-</details>
-
 ---
 
-<details>
-<summary>Técnicas de Teste</summary>
-
+## Técnicas de Teste
 - [ ] ⬜ Criação de casos de teste
 - [ ] ⬜ Escrita de cenários de teste
 - [ ] ⬜ Critérios de aceite
@@ -34,26 +28,18 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [ ] ⬜ Teste baseado em cenários
 - [ ] ⬜ Teste exploratório
 
-</details>
-
 ---
 
-<details>
-<summary>Documentação de Testes</summary>
-
+## Documentação de Testes
 - [ ] ⬜ Estrutura de um bom caso de teste
 - [ ] ⬜ Checklist de testes
 - [ ] ⬜ Relatório de execução de testes
 - [ ] ⬜ Evidências de teste
 - [ ] ⬜ Boas práticas de documentação
 
-</details>
-
 ---
 
-<details>
-<summary>Reporte de Bugs</summary>
-
+## Reporte de Bugs
 - [ ] ⬜ Estrutura de um bug report
 - [ ] ⬜ Severidade x Prioridade
 - [ ] ⬜ Passos para reprodução
@@ -62,25 +48,17 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [ ] ⬜ Bugs de usabilidade
 - [ ] ⬜ Bugs visuais
 
-</details>
-
 ---
 
-<details>
-<summary>Ferramentas de QA</summary>
-
+## Ferramentas de QA
 - [ ] ⬜ Jira (gestão de bugs e tarefas)
 - [ ] ⬜ TestLink / Zephyr / Qase
 - [ ] ⬜ Git e GitHub
 - [ ] ⬜ Inspeção de elementos no navegador
 
-</details>
-
 ---
 
-<details>
-<summary>Noções Técnicas Essenciais</summary>
-
+## Noções Técnicas Essenciais
 - [ ] ⬜ Lógica de programação básica
 - [ ] ⬜ HTML básico
 - [ ] ⬜ CSS básico
@@ -90,13 +68,9 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [ ] ⬜ Métodos HTTP (GET, POST, PUT, DELETE)
 - [ ] ⬜ Status Codes (200, 201, 400, 401, 403, 404, 500)
 
-</details>
-
 ---
 
-<details>
-<summary>Testes de API</summary>
-
+## Testes de API
 - [ ] ⬜ O que é API
 - [ ] ⬜ Testes de API com Postman / Insomnia
 - [ ] ⬜ Testes positivos
@@ -105,13 +79,9 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [ ] ⬜ Validação de body e headers
 - [ ] ⬜ Collections e environments
 
-</details>
-
 ---
 
-<details>
-<summary>Automação de Testes (Introdução)</summary>
-
+## Automação de Testes (Introdução)
 - [ ] ⬜ O que é automação de testes
 - [ ] ⬜ Diferença entre teste manual e automatizado
 - [ ] ⬜ Lógica aplicada à automação
@@ -119,13 +89,9 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [ ] ⬜ Selenium / Cypress / Playwright (conceitos)
 - [ ] ⬜ Estrutura básica de um projeto automatizado
 
-</details>
-
 ---
 
-<details>
-<summary>Soft Skills</summary>
-
+## Soft Skills
 - [ ] ⬜ Comunicação clara
 - [ ] ⬜ Pensamento crítico
 - [ ] ⬜ Atenção aos detalhes
@@ -133,17 +99,11 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [ ] ⬜ Trabalho em equipe
 - [ ] ⬜ Mentalidade de qualidade
 
-</details>
-
 ---
 
-<details>
-<summary>Extras</summary>
-
+## Extras
 - [ ] ⬜ Leitura de requisitos
 - [ ] ⬜ Testes em ambiente mobile
 - [ ] ⬜ Testes de acessibilidade
 - [ ] ⬜ Noções de testes de performance
 - [ ] ⬜ Preparação para entrevistas de QA
-
-</details>
