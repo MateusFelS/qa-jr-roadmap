@@ -39,7 +39,7 @@ Com base nesse cenário, criar **casos de teste funcionais** contemplando:
 
 | ID | Título | Pré-condição | Passos | Dados de Teste | Resultado Esperado |
 |----|--------|--------------|--------|----------------|--------------------|
-| CT-001 | Login com credenciais válidas | Usuário cadastrado no sistema | 1. Acessar a tela de login<br>2. Informar e-mail válido<br>3. Informar senha válida<br>4. Clicar no botão “Entrar” | email: `email@test.com`<br>senha: `123456` | Usuário autenticado e redirecionado para a página inicial |
-| CT-002 | Login com senha inválidas | Usuário cadastrado no sistema | 1. Acessar a tela de login<br>2. Informar um e-mail válido<br>3. Informar uma senha inválida<br>4. Clicar no botão "Entrar" | email: `email@test.com`<br>senha: `senha_inválida` | Usuário recebe uma mensagem de erro "E-mail ou senha inválidos" e permanece na tela de login | 
+| CT-001 | Login com credenciais válidas | Usuário cadastrado no sistema | 1. Acessar a tela de login<br>2. Informar e-mail válido<br>3. Informar senha válida<br>4. Clicar no botão “Entrar” | e-mail: `email@test.com`<br>senha: `123456` | Usuário autenticado e redirecionado para a página inicial |
+| CT-002 | Login com senha inválidas | Usuário cadastrado no sistema | 1. Acessar a tela de login<br>2. Informar um e-mail válido<br>3. Informar uma senha inválida<br>4. Clicar no botão "Entrar" | e-mail: `email@test.com`<br>senha: `senha_inválida` | Usuário recebe uma mensagem de erro "E-mail ou senha inválidos" e permanece na tela de login | 
 | CT-003 | Login com campos vazios | - | 1. Acessar a tela de login<br>2. Deixar os campos e-mail e senha vazios<br>3. Clicar no botão "Entrar" | e-mail: ` `<br>senha: ` ` | Usuário recebe mensagem de erro "Preencha os campos obrigatórios" e permanece na tela de login |
 | CT-004 | Senha com menos de 6 caracteres |
