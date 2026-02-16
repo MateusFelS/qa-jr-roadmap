@@ -6,7 +6,9 @@ De acordo com o **ISTQB (International Software Testing Qualifications Board)**,
 
 > **“Um conjunto de pré-condições, entradas, ações de execução e resultados esperados, desenvolvido para verificar se um requisito específico foi atendido.”**
 
-Ian Sommerville também destaca que testes bem definidos contribuem para a redução de falhas em produção, pois permitem a validação sistemática do software antes de sua entrega ao usuário final.
+Ian Sommerville também destaca:
+
+> **"Testes bem definidos contribuem para a redução de falhas em produção, pois permitem a validação sistemática do software antes de sua entrega ao usuário final."**
 
 Nesse contexto, os casos de teste atuam como um **artefato de comunicação** entre os membros do time, garantindo que desenvolvedores, QAs e stakeholders compartilhem o mesmo entendimento sobre o comportamento esperado do sistema.
 
