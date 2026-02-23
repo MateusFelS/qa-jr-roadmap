@@ -102,6 +102,7 @@ Com base nas regras acima:
 ### Critérios de Aceite
 
 - Cadastro com dados válidos
+  
 **Dado** que o usuário está na página de cadastro de produtos  
 **Quando** ele informar um nome com no mínimo 3 caracteres, uma categoria, um preço maior que zero e uma quantidade em estoque igual ou maior que zero  
 **E** o nome do produto não estiver previamente cadastrado  
@@ -109,18 +110,21 @@ Com base nas regras acima:
 **E** exibir uma mensagem de confirmação de cadastro realizado  
 
 - Campos obrigatórios não preenchidos
+  
 **Dado** que o usuário está na página de cadastro  
 **Quando** ele tentar cadastrar o produto deixando qualquer campo obrigatório em branco  
 **Então** o sistema deve impedir o cadastro  
 **E** exibir mensagem de erro informando que o campo é obrigatório  
 
-- Nome de produto com menos caracteres que o permitido  
+- Nome de produto com menos caracteres que o permitido
+  
 **Dado** que o usuário está na página de cadastro de produtos  
 **Quando** ele informar um nome com 2 caracteres ou menos  
 **Então** o sistema deve impedir o produto de ser cadastrado  
 **E** exibir uma mensagem informando que o nome deve conter no mínimo 3 caracteres  
 
 - Valores negativos
+  
 **Dado** que o usuário está na página de cadastro de produtos  
 **Quando** ele informar um preço e/ou quantidade em estoque negativos  
 **Então** o sistema deve impedir o produto de ser cadastrado  
