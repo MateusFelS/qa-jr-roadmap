@@ -101,27 +101,27 @@ Com base nas regras acima:
 
 ### Critérios de Aceite
 
-1. Cadastro com dados válidos
-- **Dado que** o usuário está na página de cadastro de produtos  
-- **Quando** ele informar um nome com no mínimo 3 caracteres, uma categoria, um preço maior que zero e uma quantidade em estoque igual ou maior que zero  
-- **E** o nome do produto não estiver previamente cadastrado  
-- **Então** o sistema deve cadastrar o produto com sucesso  
-- **E** exibir uma mensagem de confirmação de cadastro realizado  
+- Cadastro com dados válidos
+**Dado** que o usuário está na página de cadastro de produtos  
+**Quando** ele informar um nome com no mínimo 3 caracteres, uma categoria, um preço maior que zero e uma quantidade em estoque igual ou maior que zero  
+**E** o nome do produto não estiver previamente cadastrado  
+**Então** o sistema deve cadastrar o produto com sucesso  
+**E** exibir uma mensagem de confirmação de cadastro realizado  
 
-2. Campos obrigatórios não preenchidos
-- **Dado que** o usuário está na página de cadastro  
-- **Quando** ele tentar cadastrar o produto deixando qualquer campo obrigatório em branco  
-- **Então** o sistema deve impedir o cadastro  
-- **E** exibir mensagem de erro informando que o campo é obrigatório  
+- Campos obrigatórios não preenchidos
+**Dado** que o usuário está na página de cadastro  
+**Quando** ele tentar cadastrar o produto deixando qualquer campo obrigatório em branco  
+**Então** o sistema deve impedir o cadastro  
+**E** exibir mensagem de erro informando que o campo é obrigatório  
 
-3. Nome de produto com menos caracteres que o permitido
-- **Dado que** o usuário está na página de cadastro de produtos  
-- **Quando** ele informar um nome com 2 caracteres ou menos  
-- **Então** o sistema deve impedir o produto de ser cadastrado  
-- **E** exibir uma mensagem informando que o nome deve conter no mínimo 3 caracteres  
+- Nome de produto com menos caracteres que o permitido  
+**Dado** que o usuário está na página de cadastro de produtos  
+**Quando** ele informar um nome com 2 caracteres ou menos  
+**Então** o sistema deve impedir o produto de ser cadastrado  
+**E** exibir uma mensagem informando que o nome deve conter no mínimo 3 caracteres  
 
-4. Valores negativos
-- **Dado que** o usuário está na página de cadastro de produtos  
-- **Quando** ele informar um preço e/ou quantidade em estoque negativos  
-- **Então** o sistema deve impedir o produto de ser cadastrado  
-- **E** exibir uma mensagem informando que o preço e/ou quantidade em estoque devem ser igual ou maior que zero  
+- Valores negativos
+**Dado** que o usuário está na página de cadastro de produtos  
+**Quando** ele informar um preço e/ou quantidade em estoque negativos  
+**Então** o sistema deve impedir o produto de ser cadastrado  
+**E** exibir uma mensagem informando que o preço e/ou quantidade em estoque devem ser igual ou maior que zero  
