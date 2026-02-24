@@ -1,22 +1,19 @@
 # Escrita de Critérios de Aceite
 
-A **escrita de critérios de aceite** é uma atividade essencial na engenharia de requisitos e na validação de software, pois define **quando uma funcionalidade pode ser considerada pronta e correta**.
+A **escrita de critérios de aceite** define **quando uma funcionalidade pode ser considerada pronta e correta**.
 
-De acordo com o International Software Testing Qualifications Board (ISTQB), critérios de aceite são condições que um produto deve satisfazer para ser aceito por usuários, clientes ou partes interessadas. Eles conectam requisitos e testes, estabelecendo parâmetros claros e verificáveis.
+Segundo o ISTQB, critérios de aceite são condições que um produto deve satisfazer para ser aceito pelas partes interessadas. Eles estabelecem parâmetros claros e verificáveis entre requisitos e testes.
 
-Enquanto os **requisitos** descrevem *o que o sistema deve fazer*, os **critérios de aceite** definem **as condições mensuráveis que comprovam seu atendimento**.
+Enquanto **requisitos** descrevem *o que o sistema deve fazer*, os **critérios de aceite** especificam **as condições mensuráveis que comprovam que o requisito foi atendido**.
 
-Conforme Ian Sommerville:
+**Segundo Ian Sommerville:** *"Requisitos bem definidos devem possuir critérios claros de validação, permitindo verificar objetivamente se o sistema atende às necessidades estabelecidas."*
 
-> **"Requisitos bem definidos devem possuir critérios claros de validação, permitindo verificar objetivamente se o sistema atende às necessidades estabelecidas."**
-
-Nesse contexto, os critérios de aceite:
-
-- estabelecem condições objetivas e verificáveis;
+Os critérios de aceite:
+- definem condições objetivas e verificáveis;
 - reduzem ambiguidades;
-- orientam a criação de casos de teste;
-- alinham expectativas entre negócio e equipe técnica;
-- fundamentam validação e homologação.
+- orientam a criação de testes;
+- alinham expectativas;
+- servem como base para validação.
 
 ---
 
@@ -24,94 +21,74 @@ Nesse contexto, os critérios de aceite:
 
 | Requisito | Critério de Aceite | Caso de Teste |
 |------------|-------------------|---------------|
-| Define o que o sistema deve fazer | Define quando está correto | Define como validar |
-| Pode ser mais abstrato | É objetivo e mensurável | É detalhado e executável |
-| Foco na necessidade | Foco na condição de aprovação | Foco na verificação prática |
+| **O que** o sistema deve fazer | **Quando** está correto | **Como** validar |
+| Pode ser abstrato | Objetivo e mensurável | Detalhado e executável |
+| Base do desenvolvimento | Base da validação | Base da execução |
 
 ---
 
 ## Importância
 
-Critérios de aceite bem definidos:
-
+Critérios de aceite bem escritos:
 - evitam retrabalho;
-- reduzem interpretações subjetivas;
-- facilitam testes (inclusive automatizados);
-- melhoram a comunicação entre Product Owner, desenvolvedores e testers;
+- reduzem subjetividade;
+- facilitam testes automatizados;
+- melhoram a comunicação;
 - tornam a entrega mais previsível.
-
-Em contextos ágeis, normalmente estão associados às **User Stories**, representando a definição prática de “pronto”.
 
 ---
 
 ## Características
 
-Bons critérios de aceite devem ser:
+Bons critérios devem ser:
+- **Claros** – sem ambiguidade;
+- **Objetivos** – mensuráveis;
+- **Testáveis** – validáveis na prática;
+- **Específicos** – ligados ao requisito;
+- **Independentes** – sem interpretação subjetiva.
 
-- claros;
-- objetivos e mensuráveis;
-- testáveis;
-- específicos;
-- independentes de interpretação subjetiva.
-
-Uma prática recomendada é o uso do formato:
-
-**Dado / Quando / Então (Given / When / Then)**
+Formato recomendado: **Dado / Quando / Então**
 
 ---
 
-## Exercício – Criação de Critérios de Aceite
+## Exercício – Critérios de Aceite
 
 ### Contexto
 
-Sistema de cadastro de produtos com as seguintes regras:
+**Sistema de cadastro de produtos** com as regras:
+- Campos obrigatórios: nome, categoria, preço, quantidade em estoque
+- Preço > zero
+- Quantidade ≥ zero
+- Nome ≥ 3 caracteres
+- Mensagem de sucesso após cadastro válido
+- Mensagens de erro específicas para dados inválidos
+- Nome do produto deve ser único
 
-- Campos obrigatórios: nome, categoria, preço e quantidade em estoque;
-- Preço > 0;
-- Quantidade ≥ 0;
-- Nome com mínimo de 3 caracteres;
-- Exibição de mensagem de sucesso para cadastro válido;
-- Exibição de mensagens de erro específicas para dados inválidos;
-- Proibição de cadastro com nome duplicado.
-
-### Tarefa
-
-Elaborar critérios de aceite utilizando o formato **Dado / Quando / Então**, contemplando:
-
-- fluxo principal (cadastro válido);
-- validações de campos obrigatórios;
-- regras de negócio;
-- tratamento de erros.
-
-Não elaborar casos de teste detalhados.
+👉 **Elabore os critérios de aceite da funcionalidade de cadastro.**
 
 ### Critérios de Aceite
 
-**1- Cadastro com dados válidos**
-  
-**Dado** que o usuário está na página de cadastro de produtos  
-**Quando** ele informar um nome com no mínimo 3 caracteres, uma categoria, um preço maior que zero e uma quantidade em estoque igual ou maior que zero  
-**E** o nome do produto não estiver previamente cadastrado  
-**Então** o sistema deve cadastrar o produto com sucesso  
-**E** exibir uma mensagem de confirmação de cadastro realizado  
-
-**2- Campos obrigatórios não preenchidos**
+**1. Cadastro válido**
   
 **Dado** que o usuário está na página de cadastro  
-**Quando** ele tentar cadastrar o produto deixando qualquer campo obrigatório em branco  
-**Então** o sistema deve impedir o cadastro  
-**E** exibir mensagem de erro informando que o campo é obrigatório  
+**Quando** informar nome (≥3 caracteres), categoria, preço (>0) e quantidade (≥0)  
+**E** o nome não estiver cadastrado  
+**Então** o sistema cadastra o produto e exibe mensagem de sucesso  
 
-**3- Nome de produto com menos caracteres que o permitido**
+**2. Campos obrigatórios vazios**
   
-**Dado** que o usuário está na página de cadastro de produtos  
-**Quando** ele informar um nome com 2 caracteres ou menos  
-**Então** o sistema deve impedir o produto de ser cadastrado  
-**E** exibir uma mensagem informando que o nome deve conter no mínimo 3 caracteres  
+**Dado** que o usuário está na página de cadastro  
+**Quando** tentar cadastrar com algum campo obrigatório em branco  
+**Então** o sistema impede o cadastro e informa que o campo é obrigatório  
 
-**4- Valores negativos**
+**3. Nome com menos de 3 caracteres**
   
-**Dado** que o usuário está na página de cadastro de produtos  
-**Quando** ele informar um preço e/ou quantidade em estoque negativos  
-**Então** o sistema deve impedir o produto de ser cadastrado  
-**E** exibir uma mensagem informando que o preço e/ou quantidade em estoque devem ser igual ou maior que zero  
+**Dado** que o usuário está na página de cadastro  
+**Quando** informar nome com ≤2 caracteres  
+**Então** o sistema impede o cadastro e informa que o nome deve ter no mínimo 3 caracteres  
+
+**4. Valores negativos**
+  
+**Dado** que o usuário está na página de cadastro  
+**Quando** informar preço ou quantidade negativos  
+**Então** o sistema impede o cadastro e informa que os valores devem ser ≥ zero
