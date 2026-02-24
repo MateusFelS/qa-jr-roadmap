@@ -4,11 +4,11 @@ O **Particionamento de Equivalência** é uma técnica de projeto de testes ampl
 
 De acordo com o <entity type="organization">International Software Testing Qualifications Board (ISTQB)</entity>, o particionamento de equivalência consiste em dividir os dados de entrada em grupos (partições) que devem ser tratados da mesma forma pelo sistema.
 
-Segundo <entity type="people">Glenford J. Myers</entity>:
+Segundo Glenford J. Myers:
 
 > **"Os casos de teste devem ser derivados de forma a cobrir classes de equivalência válidas e inválidas, reduzindo o número total de testes necessários sem perder efetividade."**
 
-Já <entity type="people">Boris Beizer</entity> destaca que as partições devem ser:
+Já Boris Beizer destaca que as partições devem ser:
 
 - mutuamente exclusivas;
 - coletivamente exaustivas;
@@ -65,8 +65,12 @@ Identificar as **partições de equivalência** e seus respectivos valores repre
 
 | ID | Partição | Tipo | Valor Representativo |
 |----|-----------|------|----------------------|
-
-
+| PE-01 | Idade entre 18 e 60 anos | Válido | 30 |
+| PE-02 | Idade menor que 18 anos | Inválido | 17 |
+| PE-03 | Idade maior que 60 anos | Inválido | 61 |
+| PE-04 | Valor não numérico | Inválido | "abc" |
+| PE-05 | Campo vazio | Inválido | "" |
+ 
 ---
 
 ## Relação com Outras Técnicas
@@ -77,4 +81,4 @@ O particionamento de equivalência é frequentemente combinado com:
 - Tabelas de decisão, quando há múltiplas regras combinadas;
 - Casos de uso e cenários de teste, para garantir cobertura funcional completa.
 
-Segundo <entity type="people">Rex Black</entity>, a combinação dessas técnicas aumenta significativamente a probabilidade de identificação de defeitos relacionados a validações de entrada.
+Segundo Rex Black, a combinação dessas técnicas aumenta significativamente a probabilidade de identificação de defeitos relacionados a validações de entrada.
