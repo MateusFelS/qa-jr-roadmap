@@ -1,12 +1,14 @@
 # Análise de Valor Limite
 
-A **Análise de Valor Limite (AVL)** é uma técnica de projeto de testes utilizada principalmente em testes de **caixa-preta**. Seu objetivo é identificar defeitos que ocorrem nos extremos das faixas de entrada, onde há maior probabilidade de erro.
+A **Análise de Valor Limite** é uma técnica de projeto de testes de caixa-preta que complementa o Particionamento de Equivalência, focando especificamente no **comportamento do sistema nas fronteiras entre as partições**.
 
-Segundo Glenford J. Myers:
+De acordo com o ISTQB, a experiência mostra que sistemas frequentemente falham nos limites de seus domínios de entrada. Por isso, testar os valores exatos das bordas aumenta significativamente a probabilidade de encontrar defeitos.
 
-> **"Erros tendem a ocorrer com maior frequência nos limites do domínio de entrada do que no centro."**
+Segundo **Ron Patton** (em *Software Testing*):
 
-A técnica complementa o **Particionamento de Equivalência**, focando especificamente nos valores de fronteira das partições.
+> **"Mais erros de software ocorrem nos limites dos domínios de entrada do que no meio deles. A análise de valor limite concentra-se exatamente nessas áreas críticas."**
+
+**Louise Tamres** (em *Introducing Software Testing*) complementa que a técnica explora tanto os valores mínimos e máximos aceitos quanto aqueles imediatamente abaixo e acima desses limites, revelando falhas de validação.
 
 ---
 
@@ -14,72 +16,115 @@ A técnica complementa o **Particionamento de Equivalência**, focando especific
 
 A técnica parte do princípio de que:
 
-> Se o sistema falhar, há grande probabilidade de a falha ocorrer nos valores mínimos, máximos ou próximos a eles.
-
-Assim, testam-se:
-
-- o valor mínimo permitido;
-- o valor máximo permitido;
-- valores imediatamente abaixo e acima desses limites.
+> Os erros tendem a se concentrar nas bordas das partições. Portanto, devem ser testados:
+> - O valor mínimo da partição
+> - O valor máximo da partição
+> - O valor imediatamente abaixo do mínimo (inválido)
+> - O valor imediatamente acima do máximo (inválido)
 
 ---
 
-## Tipos de Valores Testados
+## Diferença entre Particionamento de Equivalência e Análise de Valor Limite
 
-Para cada limite identificado, normalmente são testados:
-
-| Tipo de Valor | Descrição |
-|---------------|------------|
-| Logo abaixo do limite inferior | Valor inválido imediatamente menor que o mínimo |
-| Limite inferior | Valor mínimo permitido |
-| Logo acima do limite inferior | Primeiro valor válido após o mínimo |
-| Logo abaixo do limite superior | Último valor válido antes do máximo |
-| Limite superior | Valor máximo permitido |
-| Logo acima do limite superior | Primeiro valor inválido após o máximo |
+| Particionamento de Equivalência | Análise de Valor Limite |
+|----------------------------------|-------------------------|
+| Testa um valor representativo de cada partição | Testa os valores exatos das bordas |
+| Foca no comportamento geral do domínio | Foca no comportamento nas fronteiras |
+| Ignora extremos (desde que dentro da partição) | Explora limites superior e inferior |
+| Reduz quantidade de testes | Aumenta precisão na detecção de falhas |
 
 ---
 
-## Exemplo Prático – Campo "Idade"
+## Regra Geral para Identificação de Valores Limite
 
-### Regras do Sistema
+Para um domínio com limite inferior **L** e superior **U**:
 
-- O valor deve ser numérico.
-- Deve estar entre **18 e 60 anos**.
-- O campo é obrigatório.
-
----
-
-## Casos de Teste – Análise de Valor Limite
-
-| ID | Valor Testado | Justificativa | Resultado Esperado |
-|----|---------------|---------------|--------------------|
-| AVL-01 | 17 | Abaixo do limite inferior | Rejeitar |
-| AVL-02 | 18 | Limite inferior | Aceitar |
-| AVL-03 | 19 | Acima do limite inferior | Aceitar |
-| AVL-04 | 59 | Abaixo do limite superior | Aceitar |
-| AVL-05 | 60 | Limite superior | Aceitar |
-| AVL-06 | 61 | Acima do limite superior | Rejeitar |
+| Valor | Descrição | Classificação |
+|-------|-----------|---------------|
+| L - 1 | Abaixo do mínimo | Inválido |
+| L     | Mínimo aceito | Válido |
+| L + 1 | Acima do mínimo | Válido |
+| U - 1 | Abaixo do máximo | Válido |
+| U     | Máximo aceito | Válido |
+| U + 1 | Acima do máximo | Inválido |
 
 ---
 
-## Quando Utilizar
+## Combinação com Particionamento de Equivalência
 
-A Análise de Valor Limite é indicada para:
+Para cobertura completa, as duas técnicas devem ser usadas em conjunto:
 
-- Faixas numéricas (idade, salário, quantidade)
-- Datas (períodos válidos)
-- Tamanho mínimo/máximo de caracteres
-- Limites de capacidade (memória, registros, armazenamento)
-- Índices de listas (primeiro e último elemento)
+1. **Particionamento de Equivalência** → identifica classes válidas e inválidas
+2. **Análise de Valor Limite** → testa as fronteiras exatas dessas classes
+
+**Exemplo integrado para campo Idade:**
+
+| Técnica | Valores testados |
+|---------|------------------|
+| Particionamento | 30 (válido), 17 (inválido), 61 (inválido), "abc" (inválido) |
+| Valor Limite | 17, 18, 19, 59, 60, 61 |
+
+Segundo **Cem Kaner** (em *Testing Computer Software*):
+
+> **"As duas técnicas se reforçam mutuamente. O particionamento garante cobertura ampla; a análise de valor limite garante profundidade nas áreas mais propensas a falhas."**
 
 ---
 
-## Relação com Outras Técnicas
+## Exercício – Aplicação de Análise de Valor Limite
 
-A técnica é frequentemente combinada com:
+### Contexto
 
-- **Particionamento de Equivalência**, para definir as faixas válidas e inválidas;
-- Tabelas de decisão;
-- Casos de uso e cenários de teste.
+Sistema de **cadastro de produtos** com as regras:
+- Nome do produto: mínimo 3, máximo 100 caracteres
+- Preço: mínimo R$ 0,01, máximo R$ 10.000,00
+- Quantidade em estoque: mínimo 0, máximo 1.000 unidades
+- Categoria: obrigatória (lista fixa com 5 opções)
 
-A combinação dessas técnicas aumenta significativamente a probabilidade de identificação de defeitos em validações de entrada.
+👉 **Identifique os valores limite para cada campo**
+
+---
+
+### Valores Limite – Campo Nome
+
+| ID | Valor | Classificação | Descrição |
+|----|-------|---------------|-----------|
+| VL-01 | 2 caracteres | Inválido | Abaixo do mínimo |
+| VL-02 | 3 caracteres | Válido | Mínimo |
+| VL-03 | 4 caracteres | Válido | Acima do mínimo|
+| VL-04 | 99 caracteres | Válido | Abaixo do máximo |
+| VL-05 | 100 caracteres | Válido | Máximo |
+| VL-06 | 101 caracteres | Inválido | Acima do máximo |
+
+### Valores Limite – Preço
+
+| ID | Valor | Classificação | Descrição |
+|----|-------|---------------|-----------|
+| VL-07 | R$ 0,00 | Inválido | Abaixo do mínimo |
+| VL-08 | R$ 0,01 | Válido | Mínimo |
+| VL-09 | R$ 0,02 | Válido | Acima do mínimo |
+| VL-10 | R$ 9.999,99 | Válido | Abaixo do máximo |
+| VL-11 | R$ 10.000,00 | Válido | Máximo |
+| VL-12 | R$ 10.000,01 | Inválido | Acima do máximo |
+
+### Valores Limite – Quantidade em Estoque
+
+| ID | Valor | Classificação | Descrição |
+|----|-------|---------------|-----------|
+| VL-13 | -1 | Inválido | Abaixo do mínimo |
+| VL-14 | 0 | Válido | Mínimo |
+| VL-15 | 1 | Válido | Acima do mínimo |
+| VL-16 | 999 | Válido | Abaixo do máximo |
+| VL-17 | 1.000 | Válido | Máximo |
+| VL-18 | 1.001 | Inválido | Acima do máximo |
+
+### Valores Limite – Categoria
+
+Para campos com domínio discreto (lista fixa), a análise de valor limite se aplica de forma adaptada:
+
+| ID | Valor | Classificação | Descrição |
+|----|-------|---------------|-----------|
+| VL-19 | Nenhuma selecionada | Inválido | Abaixo do mínimo (obrigatório) |
+| VL-20 | Primeira opção da lista | Válido | Valor mínimo do domínio |
+| VL-21 | Segunda opção | Válido | Representativo |
+| VL-22 | Última opção da lista | Válido | Valor máximo do domínio |
+| VL-23 | Opção inexistente | Inválido | Acima do máximo |
