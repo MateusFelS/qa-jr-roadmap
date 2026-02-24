@@ -21,7 +21,7 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 ## Técnicas de Teste
 - [x] 🟩 Criação de casos de teste
 - [x] 🟩 Escrita de cenários de teste
-- [ ] ⬜ Critérios de aceite
+- [x] 🟩 Critérios de aceite
 - [ ] ⬜ Particionamento de equivalência
 - [ ] ⬜ Análise de valor limite
 - [ ] ⬜ Tabela de decisão
