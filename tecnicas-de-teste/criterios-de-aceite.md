@@ -8,7 +8,7 @@ Enquanto os **requisitos** descrevem *o que o sistema deve fazer*, os **critéri
 
 Conforme Ian Sommerville:
 
-> "Requisitos bem definidos devem possuir critérios claros de validação, permitindo verificar objetivamente se o sistema atende às necessidades estabelecidas."
+> **"Requisitos bem definidos devem possuir critérios claros de validação, permitindo verificar objetivamente se o sistema atende às necessidades estabelecidas."**
 
 Nesse contexto, os critérios de aceite:
 
