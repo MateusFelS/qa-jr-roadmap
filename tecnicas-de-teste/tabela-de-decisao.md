@@ -6,7 +6,7 @@ De acordo com o *International Software Testing Qualifications Board (ISTQB)*, a
 
 Segundo Glenford J. Myers:
 
-> "Quando o resultado do processamento depende de combinações de condições, a tabela de decisão fornece um método sistemático e completo para derivar casos de teste."
+> **"Quando o resultado do processamento depende de combinações de condições, a tabela de decisão fornece um método sistemático e completo para derivar casos de teste."**
 
 Já Boris Beizer destaca que sistemas com regras de negócio complexas tendem a apresentar defeitos justamente nas **interações entre condições**, e não nas condições isoladas.
 
@@ -16,7 +16,7 @@ Já Boris Beizer destaca que sistemas com regras de negócio complexas tendem a 
 
 A técnica parte do princípio de que:
 
-> Quando múltiplas condições influenciam o comportamento do sistema, é necessário testar suas combinações de forma estruturada.
+> **Quando múltiplas condições influenciam o comportamento do sistema, é necessário testar suas combinações de forma estruturada.**
 
 Uma **Tabela de Decisão** é composta por:
 
@@ -68,20 +68,31 @@ Um sistema de concessão de desconto possui as seguintes regras:
 
 ## Tabela de Decisão
 
-| Condições / Regras | R1 | R2 | R3 | R4 |
-|--------------------|----|----|----|----|
-| Cliente cadastrado? | S | N | S | N |
-| Compra > R$ 500? | S | S | N | N |
-| Pagamento à vista? | - | S | - | - |
-| **Ação: 10% desconto** | X |  |  |  |
-| **Ação: 5% desconto** |  | X |  |  |
-| **Ação: Sem desconto** |  |  | X | X |
+| Condições / Regras        | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 |
+|---------------------------|----|----|----|----|----|----|----|----|
+| Cliente cadastrado?       | S  | S  | S  | S  | N  | N  | N  | N  |
+| Compra > R$ 500?          | S  | S  | N  | N  | S  | S  | N  | N  |
+| Pagamento à vista?        | S  | N  | S  | N  | S  | N  | S  | N  |
+| **Ação: 10% desconto**    | X  | X  |    |    |    |    |    |    |
+| **Ação: 5% desconto**     |    |    |    |    | X  |    |    |    |
+| **Ação: Sem desconto**    |    |    | X  | X  |    | X  | X  | X  |
 
 Legenda:  
 "S" = Sim  
 "N" = Não  
 "-" = Irrelevante  
 "X" = Ação executada  
+
+## Interpretação das Regras
+
+- R1: Cadastrado + Compra > 500 + À vista → 10%
+- R2: Cadastrado + Compra > 500 + Não à vista → 10%
+- R3: Cadastrado + Compra ≤ 500 + À vista → Sem desconto
+- R4: Cadastrado + Compra ≤ 500 + Não à vista → Sem desconto
+- R5: Não cadastrado + Compra > 500 + À vista → 5%
+- R6: Não cadastrado + Compra > 500 + Não à vista → Sem desconto
+- R7: Não cadastrado + Compra ≤ 500 + À vista → Sem desconto
+- R8: Não cadastrado + Compra ≤ 500 + Não à vista → Sem desconto
 
 ---
 
