@@ -23,7 +23,7 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [x] 🟩 Escrita de cenários de teste
 - [x] 🟩 Critérios de aceite
 - [x] 🟩 Particionamento de equivalência
-- [ ] ⬜ Análise de valor limite
+- [x] 🟩 Análise de valor limite
 - [ ] ⬜ Tabela de decisão
 - [ ] ⬜ Teste baseado em cenários
 - [ ] ⬜ Teste exploratório
