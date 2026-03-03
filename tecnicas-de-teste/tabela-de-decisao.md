@@ -78,10 +78,10 @@ Um sistema de concessão de desconto possui as seguintes regras:
 | **Ação: Sem desconto** |  |  | X | X |
 
 Legenda:  
-S = Sim  
-N = Não  
-- = Irrelevante  
-X = Ação executada  
+"S" = Sim  
+"N" = Não  
+"-" = Irrelevante  
+"X" = Ação executada  
 
 ---
 
