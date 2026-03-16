@@ -25,8 +25,8 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 - [x] 🟩 Particionamento de equivalência
 - [x] 🟩 Análise de valor limite
 - [x] 🟩 Tabela de decisão
-- [ ] ⬜ Teste baseado em cenários
-- [ ] ⬜ Teste exploratório
+- [x] 🟩 Teste baseado em cenários
+- [x] 🟩 Teste exploratório
 
 ---
 
