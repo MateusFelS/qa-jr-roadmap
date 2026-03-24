@@ -1,6 +1,6 @@
 # Exercício – Aplicação de Análise de Valor Limite
 
-### Contexto
+## Contexto
 
 Sistema de **cadastro de produtos** com as regras:
 - Nome do produto: mínimo 3, máximo 100 caracteres
@@ -12,7 +12,7 @@ Sistema de **cadastro de produtos** com as regras:
 
 ---
 
-### Valores Limite – Campo Nome
+## Valores Limite – Campo Nome
 
 | ID | Valor | Classificação | Descrição |
 |----|-------|---------------|-----------|
@@ -23,7 +23,7 @@ Sistema de **cadastro de produtos** com as regras:
 | VL-05 | 100 caracteres | Válido | Máximo |
 | VL-06 | 101 caracteres | Inválido | Acima do máximo |
 
-### Valores Limite – Preço
+## Valores Limite – Preço
 
 | ID | Valor | Classificação | Descrição |
 |----|-------|---------------|-----------|
@@ -34,7 +34,7 @@ Sistema de **cadastro de produtos** com as regras:
 | VL-11 | R$ 10.000,00 | Válido | Máximo |
 | VL-12 | R$ 10.000,01 | Inválido | Acima do máximo |
 
-### Valores Limite – Quantidade em Estoque
+## Valores Limite – Quantidade em Estoque
 
 | ID | Valor | Classificação | Descrição |
 |----|-------|---------------|-----------|
@@ -45,7 +45,7 @@ Sistema de **cadastro de produtos** com as regras:
 | VL-17 | 1.000 | Válido | Máximo |
 | VL-18 | 1.001 | Inválido | Acima do máximo |
 
-### Valores Limite – Categoria
+## Valores Limite – Categoria
 
 Para campos com domínio discreto (lista fixa), a análise de valor limite se aplica de forma adaptada:
 
