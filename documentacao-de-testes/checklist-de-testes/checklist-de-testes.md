@@ -1,26 +1,37 @@
 # Checklist de Testes
 
-Um **checklist de testes** é uma lista de verificações usada para validar um sistema de forma rápida e consistente.
+Um **checklist de testes** é uma lista estruturada de verificações que devem ser realizadas durante a validação de um sistema, garantindo consistência e cobertura mínima sem necessariamente detalhar cada passo como em um caso de teste.
 
-Segundo o ISTQB:
+Segundo o ISTQB (International Software Testing Qualifications Board):
 
-> "Checklist-based testing é uma técnica baseada na experiência, usando uma lista de itens a verificar."
+> **"Checklist-based testing é uma técnica baseada na experiência, onde o testador utiliza uma lista de itens a serem verificados."**
 
----
+Já Glenford Myers, em *The Art of Software Testing*, destaca:
 
-## Objetivo
-
-- Garantir cobertura básica
-- Evitar esquecimentos
-- Padronizar testes
-- Apoiar testes exploratórios e regressão
+> **"A experiência do testador pode ser estruturada em listas que ajudam a evitar esquecimentos sistemáticos."**
 
 ---
 
-## Checklist vs Caso de Teste
+## Objetivo do Checklist de Testes
 
-- **Caso de teste** → detalhado, passo a passo  
-- **Checklist** → simples, direto, rápido  
+Um checklist bem definido deve:
+
+- Garantir **cobertura básica e rápida**
+- Reduzir o risco de **esquecimento de cenários comuns**
+- Padronizar verificações entre testadores
+- Servir como apoio para **testes exploratórios**
+- Aumentar a eficiência em **regressões**
+
+---
+
+## Diferença entre Checklist e Caso de Teste
+
+| Aspecto | Caso de Teste | Checklist |
+|--------|--------------|----------|
+| Nível de detalhe | Alto | Baixo |
+| Estrutura | Formal e completa | Lista simples |
+| Execução | Passo a passo | Verificação direta |
+| Objetivo | Validar comportamento específico | Garantir cobertura geral |
 
 ---
 
