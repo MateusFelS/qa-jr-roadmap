@@ -38,8 +38,29 @@ Sistema de **login** com as seguintes regras:
 
 ---
 
-| ID | Título | Pré-condições | Dados de entrada | Passos | Resultado esperado |
-|----|--------|---------------|------------------|--------|--------------------|
-| CT-01 | Login com sucesso | Usuário cadastrado no sistema | 1. E-mail: `email_valido@gmail.com`<br>2. Senha: `123456` | 1. Preencha os campos "E-mail" e "Senha" com credenciais válidas.<br>2. Clique no botão "Entrar". | Usuário recebe uma mensagem de sucesso e é redirecionado para página inicial. |
-| CT-02 | E-mail inválido | Usuário cadastrado no sistema | 1. E-mail: `email_invalido@`<br>2. Senha: `123456` | 1. Preencha o campo "E-mail" com um formato inválido e o campo "Senha" corretamente.<br>2. Clique no botão "Entrar". | Usuário recebe uma mensagem alertando de que o formato do email está inválido e continua na tela de login |
-| CT-03 | Senha inválida | Usuário cadastrado no sistema | 1. Email: `email_valido@gmail.com`<br>2. Senha: `123` | 1. Preencha o campo "E-mail" corretamente e o campo "Senha" com um valor menor que 6 caracteres.<br>2. Clique no botão "Entrar" | Usuário recebe uma mensagem alertando que a senha está inválida e continua na tela de login | 
+<table>
+  <tr>
+    <th style="width:5%">ID</th>
+    <th style="width:10%">Título</th>
+    <th style="width:15%">Pré-condições</th>
+    <th style="width:20%">Dados de entrada</th>
+    <th style="width:25%">Passos</th>
+    <th style="width:25%">Resultado esperado</th>
+  </tr>
+  <tr>
+    <td>CT-01</td>
+    <td>Login com sucesso</td>
+    <td>Usuário cadastrado no sistema</td>
+    <td>
+      1. E-mail: <code>email_valido@gmail.com</code><br>
+      2. Senha: <code>123456</code>
+    </td>
+    <td>
+      1. Preencha os campos "E-mail" e "Senha"...<br>
+      2. Clique no botão "Entrar".
+    </td>
+    <td>
+      Usuário recebe uma mensagem de sucesso e é redirecionado...
+    </td>
+  </tr>
+</table>
