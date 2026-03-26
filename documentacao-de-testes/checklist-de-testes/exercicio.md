@@ -40,10 +40,17 @@ Sistema de **cadastro de usuário** com as seguintes regras:
 
 ---
 
-## Template para Resposta
-
 | ID | Item | Observações |
-|----|------|------------|
-| CL-01 |  |  |
-| CL-02 |  |  |
-| CL-03 |  |  |
+|----|------|-------------|
+| CL-01 | Campo nome é obrigatório | - |
+| CL-02 | Campo e-mail aceita formato válido | - |
+| CL-03 | Campo senha exige mínimo de 8 caracteres | - |
+| CL-04 | Campo confirmação de senha deve ser igual à senha | - |
+| CL-05 | Sistema exibe mensagem para campo nome vazio | - |
+| CL-06 | Sistema exibe erro para e-mail inválido | - |
+| CL-07 | Sistema exibe erro para senha com menos de 8 caracteres | - |
+| CL-08 | Sistema exibe mensagem para confirmação de senha diferente da senha | - |
+| CL-09 | Sistema permite cadastro com dados válidos | - |
+| CL-10 | Usuário é redirecionado após cadastro com sucesso | - |
+| CL-11 | Campos estão visíveis na tela | - |
+| CL-12 | Botão de cadastro está disponível | - |
