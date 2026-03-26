@@ -68,5 +68,6 @@ Você executou testes em um sistema de login com os seguintes resultados:
 Não é recomendada a liberação do sistema. Foram identificados defeitos de alta severidade relacionados à segurança, como:
   - Aceitação de senhas fracas.
   - Ausência de bloqueio após múltiplas tentativas inválidas.
+    
 Esses problemas podem comprometer a integridade e segurança dos dados dos usuários.
 A liberação deve ocorrer somente após a correção dos defeitos críticos e nova validação dos testes.
