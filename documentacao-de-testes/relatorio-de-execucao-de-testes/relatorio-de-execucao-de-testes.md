@@ -56,20 +56,14 @@ Um relatório de execução de testes tem como principal objetivo:
 
 ## Métricas
 
-- Taxa de Sucesso:  
-  $$
-  \frac{Aprovados}{Executados} \times 100
-  $$
+Taxa de Sucesso:
+`(Aprovados / Executados) * 100`
 
-- Taxa de Falha:  
-  $$
-  \frac{Reprovados}{Executados} \times 100
-  $$
+Taxa de Falha:
+`(Reprovados / Executados) * 100`
 
-- Densidade de Defeitos:  
-  $$
-  \frac{Defeitos}{Tamanho\ do\ Sistema}
-  $$
+Densidade de Defeitos:
+`Defeitos / Tamanho do Sistema`
   
 ---
 
