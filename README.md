@@ -33,9 +33,9 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 ## Documentação de Testes
 - [x] 🟩 Estrutura de um bom caso de teste
 - [x] 🟩 Checklist de testes
-- [ ] ⬜ Relatório de execução de testes
-- [ ] ⬜ Evidências de teste
-- [ ] ⬜ Boas práticas de documentação
+- [x] 🟩 Relatório de execução de testes
+- [x] 🟩 Evidências de teste
+- [x] 🟩 Boas práticas de documentação
 
 ---
 
