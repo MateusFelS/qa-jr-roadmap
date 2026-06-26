@@ -40,13 +40,13 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 ---
 
 ## Reporte de Bugs
-- [ ] ⬜ Estrutura de um bug report
-- [ ] ⬜ Severidade x Prioridade
-- [ ] ⬜ Passos para reprodução
-- [ ] ⬜ Resultado esperado x resultado atual
-- [ ] ⬜ Bugs funcionais
-- [ ] ⬜ Bugs de usabilidade
-- [ ] ⬜ Bugs visuais
+- [x] 🟩 Estrutura de um bug report
+- [x] 🟩 Severidade x Prioridade
+- [x] 🟩 Passos para reprodução
+- [x] 🟩 Resultado esperado x resultado atual
+- [x] 🟩 Bugs funcionais
+- [x] 🟩 Bugs de usabilidade
+- [x] 🟩 Bugs visuais
 
 ---
 
