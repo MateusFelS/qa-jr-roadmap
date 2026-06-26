@@ -1,16 +1,16 @@
 # Estrutura de um Bug Report
 
-Um **Bug Report** (Relatório de Defeito) é um documento utilizado para registrar, comunicar, acompanhar e facilitar a correção de um defeito encontrado durante a execução de testes ou durante a utilização do software.
+Um **Bug Report** (Relatório de Defeito) é um documento utilizado para registrar, comunicar e acompanhar um defeito encontrado durante a execução de testes ou durante a utilização de um software.
 
 Seu principal objetivo é fornecer informações suficientes para que qualquer membro da equipe consiga **reproduzir o problema, compreender sua causa e validar posteriormente sua correção**.
 
-Segundo o **ISTQB (CTFL - Foundation Level)**, um relatório de defeito deve conter informações claras, completas e objetivas, permitindo que o defeito seja reproduzido e tratado de maneira eficiente durante o ciclo de vida do desenvolvimento.
+Segundo o **ISTQB (CTFL - Foundation Level)**, um relatório de defeito deve ser claro, completo, objetivo e conter informações suficientes para permitir a reprodução do problema.
 
-**Cem Kaner**, em *Testing Computer Software*, destaca:
+**Cem Kaner**, em *Testing Computer Software*, afirma:
 
 > **"Um bom relatório de defeito contém todas as informações necessárias para que outra pessoa consiga reproduzir o problema sem depender do testador que o encontrou."**
 
-**Rex Black**, em *Foundations of Software Testing*, complementa que a qualidade da comunicação entre testadores e desenvolvedores influencia diretamente a velocidade da correção dos defeitos.
+**Rex Black**, em *Foundations of Software Testing*, destaca que a qualidade de um Bug Report influencia diretamente a eficiência da comunicação entre testadores e desenvolvedores, reduzindo o tempo necessário para diagnosticar e corrigir defeitos.
 
 ---
 
@@ -25,7 +25,7 @@ Um Bug Report deve responder, no mínimo, às seguintes perguntas:
 - Qual comportamento realmente ocorreu?
 - Qual o impacto do defeito?
 
-Quanto mais completas forem essas respostas, menor será o tempo gasto pela equipe para investigar e corrigir o problema.
+Quanto mais completas e objetivas forem essas respostas, maior será a facilidade para reproduzir e corrigir o defeito.
 
 ---
 
@@ -44,13 +44,66 @@ Embora ferramentas como Jira, Azure DevOps, Bugzilla e Redmine utilizem nomencla
 | **Evidências** | Prints, vídeos, logs ou mensagens de erro |
 | **Ambiente** | Sistema operacional, navegador, dispositivo, versão da aplicação etc. |
 | **Severidade** | Impacto técnico causado pelo defeito |
-| **Prioridade** | Ordem ou urgência para correção |
+| **Prioridade** | Urgência da correção |
+
+---
+
+# Passos para Reprodução
+
+Os **Passos para Reprodução** descrevem exatamente a sequência de ações necessária para reproduzir o defeito.
+
+Seu objetivo é permitir que qualquer pessoa consiga repetir o problema seguindo o mesmo procedimento.
+
+## Boas práticas
+
+- Informar as pré-condições, quando existirem.
+- Descrever cada ação em ordem cronológica.
+- Não omitir etapas.
+- Informar dados utilizados durante o teste.
+- Evitar descrições genéricas.
+
+**Exemplo:**
+
+1. Realizar login como administrador.
+2. Acessar **Cadastro > Usuários**.
+3. Clicar em **Novo Usuário**.
+4. Preencher todos os campos obrigatórios.
+5. Deixar o campo **Telefone** vazio.
+6. Clicar em **Salvar**.
+
+---
+
+# Resultado Esperado x Resultado Atual
+
+Esses dois campos permitem comparar o comportamento previsto do sistema com o comportamento realmente observado.
+
+## Resultado Esperado
+
+Descreve como o sistema deveria funcionar de acordo com os requisitos.
+
+**Exemplo:**
+
+> O sistema deve informar que o campo Telefone é obrigatório.
+
+## Resultado Atual
+
+Descreve exatamente o comportamento observado durante o teste.
+
+**Exemplo:**
+
+> O sistema apresenta erro HTTP 500 e interrompe o processamento.
+
+| Resultado Esperado | Resultado Atual |
+|--------------------|-----------------|
+| Baseado nos requisitos | Baseado na execução do teste |
+| Representa o comportamento correto | Representa o comportamento observado |
+| Define o que deveria acontecer | Define o que realmente aconteceu |
 
 ---
 
 # Severidade x Prioridade
 
-Embora frequentemente utilizadas juntas, **Severidade** e **Prioridade** representam conceitos diferentes.
+Embora frequentemente confundidos, esses conceitos possuem objetivos diferentes.
 
 Segundo **Rex Black**, a severidade está relacionada ao impacto técnico do defeito, enquanto a prioridade representa a urgência de sua correção sob a perspectiva do negócio.
 
@@ -61,127 +114,47 @@ Segundo **Rex Black**, a severidade está relacionada ao impacto técnico do def
 | Geralmente definida pela equipe de testes | Geralmente definida pelo Product Owner, gerente ou equipe responsável |
 | Pode ser alta e possuir baixa prioridade | Pode ser alta mesmo em defeitos pouco severos |
 
-**Exemplo:**
+**Exemplos:**
 
 | Situação | Severidade | Prioridade |
 |----------|------------|------------|
 | Sistema não permite login | Alta | Alta |
-| Logotipo da empresa desatualizado na tela inicial | Baixa | Alta (campanha de marketing) |
-| Erro em funcionalidade pouco utilizada | Alta | Baixa |
+| Logotipo incorreto na tela inicial | Baixa | Alta |
+| Erro em relatório pouco utilizado | Alta | Baixa |
 
 ---
 
-# Passos para Reprodução
+# Boas Práticas na Elaboração de um Bug Report
 
-Os **Passos para Reprodução** descrevem exatamente o caminho percorrido até que o defeito aconteça.
+Para facilitar a comunicação entre as equipes, recomenda-se:
 
-Seu objetivo é permitir que qualquer pessoa consiga reproduzir o problema seguindo a mesma sequência de ações.
-
-Boas práticas:
-
-- Informar a pré-condição, quando existir.
-- Escrever cada ação em ordem cronológica.
-- Não omitir etapas.
-- Evitar descrições genéricas.
-
-**Exemplo:**
-
-1. Realizar login como administrador.
-2. Acessar o menu **Cadastro > Usuários**.
-3. Clicar em **Novo Usuário**.
-4. Preencher todos os campos obrigatórios.
-5. Deixar o campo **Telefone** vazio.
-6. Clicar em **Salvar**.
+- Utilizar títulos claros e objetivos.
+- Descrever apenas fatos observados.
+- Informar todos os passos para reprodução.
+- Registrar claramente os resultados esperado e atual.
+- Anexar evidências sempre que possível.
+- Informar corretamente o ambiente de testes.
+- Evitar linguagem subjetiva ou opiniões.
 
 ---
 
-# Resultado Esperado x Resultado Atual
+# Exemplo Simplificado de Bug Report
 
-Esses dois campos representam a comparação entre o comportamento especificado e o comportamento observado.
-
-## Resultado Esperado
-
-Descreve como o sistema deveria funcionar segundo os requisitos ou regras de negócio.
-
-**Exemplo:**
-
-> O sistema deve exibir uma mensagem informando que o telefone é obrigatório.
-
-## Resultado Atual (Obtido)
-
-Descreve exatamente o comportamento observado durante o teste.
-
-**Exemplo:**
-
-> A aplicação apresenta erro HTTP 500 e interrompe o processamento.
-
-A descrição deve ser objetiva, baseada em fatos e livre de interpretações.
+| Campo | Conteúdo |
+|--------|----------|
+| **Título** | Erro ao salvar usuário sem telefone |
+| **Pré-condição** | Usuário autenticado como administrador |
+| **Passos** | Cadastro → Novo Usuário → Deixar telefone vazio → Salvar |
+| **Resultado esperado** | Sistema deve solicitar o preenchimento do telefone |
+| **Resultado atual** | Aplicação apresenta erro HTTP 500 |
+| **Severidade** | Alta |
+| **Prioridade** | Média |
 
 ---
 
-# Classificação dos Bugs
+# Relação com o Processo de Testes
 
-Os defeitos podem ser classificados de diversas maneiras. Uma classificação bastante utilizada considera a natureza do problema.
-
-## Bugs Funcionais
-
-São defeitos relacionados ao funcionamento da aplicação.
-
-O sistema executa uma ação diferente daquela especificada pelos requisitos.
-
-**Exemplos:**
-
-- Login não funciona.
-- Cálculo incorreto de impostos.
-- Botão Salvar não grava informações.
-- Validação aceita dados inválidos.
-
----
-
-## Bugs de Usabilidade
-
-São problemas que dificultam ou prejudicam a interação do usuário com o sistema, mesmo quando as funcionalidades executam corretamente.
-
-Segundo **Jakob Nielsen**, problemas de usabilidade reduzem a eficiência, aumentam erros do usuário e prejudicam a experiência de utilização.
-
-**Exemplos:**
-
-- Fluxo de cadastro confuso.
-- Mensagens de erro pouco claras.
-- Navegação difícil.
-- Campos importantes pouco visíveis.
-
----
-
-## Bugs Visuais
-
-Também chamados de **bugs de interface (UI Bugs)**, afetam apenas a apresentação da aplicação.
-
-Normalmente não comprometem a lógica de negócio, mas podem prejudicar a experiência do usuário e a credibilidade do produto.
-
-**Exemplos:**
-
-- Texto cortado.
-- Botões desalinhados.
-- Cores incorretas.
-- Ícones ausentes.
-- Layout quebrado em dispositivos móveis.
-
----
-
-# Relação entre os Conceitos
-
-Durante a execução dos testes:
-
-1. O testador identifica um defeito.
-2. Classifica seu tipo (funcional, usabilidade ou visual).
-3. Documenta os passos para reprodução.
-4. Registra o resultado esperado.
-5. Registra o resultado atual.
-6. Define a severidade.
-7. A equipe define a prioridade da correção.
-
-Um Bug Report completo reduz ambiguidades, facilita a reprodução do problema e acelera o processo de correção.
+Após identificar um defeito, o testador registra todas as informações relevantes em um Bug Report. Esse documento é utilizado pela equipe de desenvolvimento para reproduzir, analisar, corrigir e posteriormente validar a solução implementada.
 
 Segundo **Boris Beizer**, em *Software Testing Techniques*:
 
