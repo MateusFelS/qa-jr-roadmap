@@ -51,10 +51,10 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 ---
 
 ## Ferramentas de QA
-- [ ] ⬜ Jira (gestão de bugs e tarefas)
-- [ ] ⬜ TestLink / Zephyr / Qase
-- [ ] ⬜ Git e GitHub
-- [ ] ⬜ Inspeção de elementos no navegador
+- [x] 🟩 Jira (gestão de bugs e tarefas)
+- [x] 🟩 TestLink / Zephyr / Qase
+- [x] 🟩 Git e GitHub
+- [x] 🟩 Inspeção de elementos no navegador
 
 ---
 
