@@ -59,10 +59,10 @@ O objetivo é desenvolver uma base sólida em qualidade de software, testes manu
 ---
 
 ## Noções Técnicas Essenciais
-- [ ] ⬜ Lógica de programação básica
-- [ ] ⬜ HTML básico
-- [ ] ⬜ CSS básico
-- [ ] ⬜ JavaScript básico
+- [x] 🟩 Lógica de programação básica
+- [x] 🟩 HTML básico
+- [x] 🟩 CSS básico
+- [x] 🟩 JavaScript básico
 - [ ] ⬜ Conceitos de Front-end e Back-end
 - [ ] ⬜ Protocolo HTTP/HTTPS
 - [ ] ⬜ Métodos HTTP (GET, POST, PUT, DELETE)
